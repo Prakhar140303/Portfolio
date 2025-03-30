@@ -1,17 +1,23 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import './App.css';
-import Header from './header/Header.js';
-import Footer from './footer/Footer.js';
-import Center from './center/Center.jsx'; 
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
-function App() {
+const App = () => {
   return (
-    <>
-     <Header/>
-     <Center/>
-     <Footer/>
-    </>
+    <div>
+      <Header />
+      <main>
+        <Home />
+        <About />
+        <Portfolio />
+        <Contact />
+      </main>
+    </div>
   );
-}
+};
 
 export default App;
