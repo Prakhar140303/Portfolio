@@ -1,11 +1,11 @@
 
 const Portfolio = () => {
     return (
-      <section id="portfolio" style={{ padding: '2rem' }}>
+      <section id="portfolio" >
         <h2>My Work</h2>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <div >
           {/* Example portfolio item */}
-          <div style={{ border: '1px solid #ddd', padding: '1rem', flex: '1 0 30%' }}>
+          <div >
             <h3>Project Title</h3>
             <p>A short description of your project.</p>
           </div>

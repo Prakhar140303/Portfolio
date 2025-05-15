@@ -1,7 +1,7 @@
 
 const Contact = () => {
     return (
-      <section id="contact" style={{ padding: '2rem', background: '#f4f4f4' }}>
+      <section id="contact" >
         <h2>Contact Me</h2>
         <p>Feel free to reach out for collaborations or just a friendly hello.</p>
         <form>
