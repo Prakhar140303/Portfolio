@@ -48,7 +48,7 @@ const Contact = () => {
       </div>
 
       <div className="text-center mt-10 text-sm text-gray-400">
-        © {new Date().getFullYear()} MyPortfolio — All rights reserved.
+        © {new Date().getFullYear()} Prakhar Singh Parihar — All rights reserved.
       </div>
     </footer>
   );
