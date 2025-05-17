@@ -3,8 +3,10 @@ import {motion} from 'framer-motion'
 export default function Platforms() {
   return (
     <motion.section id='platforms' className='dm:my-16 sm:my-8 m-4'>
-        <h1 className='text-5xl font-bold text-center mb-8 text-[#753314]'>Platforms</h1>
-        <div className=''>
+        <div className='flex md:flex-row flex-col justify-around'>
+        <div className='flex flex-col'>
+
+            <h1 className='text-5xl font-bold text-center mb-8 text-[#753314]'>Platforms</h1>
             <div className="bg-white shadow-md rounded-lg p-4 max-w-md mx-auto">
                 <h2 className="text-5xl font-bold mb-4 text-center text-[#753314]">LeetCode Stats</h2>
                 <img
@@ -13,10 +15,11 @@ export default function Platforms() {
                     className="mx-auto"
                     />
             </div>
-            <section className=" py-12 text-center">
-                <h2 className="text-5xl font-bold text-white mb-6">GitHub Stats</h2>
+        </div>
+            <section className="  text-center">
+                <h2 className="text-5xl font-bold text-[#753314] mb-6">GitHub Stats</h2>
                 
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+                <div className="flex flex-col  justify-center items-center gap-8">
                     <img
                     src="https://github-readme-stats.vercel.app/api?username=Prakhar140303&show_icons=true&theme=radical"
                     alt="GitHub Stats"

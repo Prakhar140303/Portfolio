@@ -7,6 +7,8 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Platforms from './components/Platforms';
+import Projects from './components/projects';
+import  Typewriter  from 'typewriter-effect';
 
 const App = () => {
   const [power ,setPower] = useState(false);
@@ -15,7 +17,7 @@ const App = () => {
       {power && <Header />}
         <main  className={`  p-12  h-screen w-screen bg-no-repeat bg-center bg-contain overflow-hidden"+ ${power===true ? "sm:mb-12 mt-16 my-4" :""}` }
           style={{
-            backgroundImage: "url('/src/assets/computer_background_transparent.png')",
+            backgroundImage: "url('../assets/computer_background_transparent.png')",
           }}>
         {power &&
         <div className="  flex flex-col items-center justify-center text-center overflow-hidden">
@@ -23,12 +25,15 @@ const App = () => {
         </div>
         }
         {!power && 
-        <div className='flex flex-col items-center '>
+        <div className='flex flex-col items-center overflow-hidden'>
 
           <div className="  flex flex-col  md:pt-28  pt-32 pb-8 h-screen items-center" 
             onClick={()=>setPower(!power)}>
             <Power className='size-24 ' />
             <span className='md:text-5xl sm:text-4xl text-3xl'>Click To Start</span>
+            <div className='flex flex-row items-center md: pt-4'>
+              <span className="animate-pulse text-2xl md:text-3xl">Loading...</span>
+          </div>
           </div>
         </div>
 
@@ -40,7 +45,9 @@ const App = () => {
         <Education />
         <Skills />
         <Platforms />
+        <Projects />
       <Contact />
+
         </>
       }
     </div>

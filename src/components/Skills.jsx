@@ -12,7 +12,8 @@ import {
   SiNextdotjs,
   SiDaisyui,
   SiMaterialdesign ,
-  SiShadcnui
+  SiShadcnui,
+  SiTypescript
 } from 'react-icons/si';
 import {motion} from 'framer-motion'
 const skills = {
@@ -21,6 +22,7 @@ const skills = {
     { name: 'Python',    icon: SiPython },
     { name: 'C',         icon: SiC },
     { name: 'JavaScript',icon: SiJavascript },
+    {name : 'TypeScript',icon: SiTypescript},
   ],
   Databases: [
     { name: 'MySQL',     icon: SiMysql },
