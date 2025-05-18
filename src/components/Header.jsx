@@ -21,8 +21,8 @@ const Header = () => {
           <li><a href="#education" onClick={(e) =>handleScroll(e, 'education')} className="hover:underline">Education</a></li>
           <li><a href="#skills" onClick={(e) =>handleScroll(e, 'skills')} className="hover:underline">Skills</a></li>
           <li><a href="#platforms" onClick={(e) =>handleScroll(e, 'platforms')} className="hover:underline">Platform</a></li>
-          <li><a>Projects</a></li>
-          <li><a>Contact</a></li>
+          <li><a href="#projects" onClick={(e) =>handleScroll(e, 'projects')} className="hover:underline">Projects</a></li>
+          <li><a href="#contact" onClick={(e) =>handleScroll(e, 'contact')} className="hover:underline">Contact</a></li>
         </ul>
       </div>
 
@@ -51,8 +51,8 @@ const Header = () => {
           <li><a href="#portfolio" onClick={(e) =>handleScroll(e, 'portfolio')} className="hover:underline">About me</a></li>
           <li><a href="#education" onClick={(e) =>handleScroll(e, 'education')} className="hover:underline">About</a></li>
           <li><a href="#skills" onClick={(e) =>handleScroll(e, 'skills')} className="hover:underline">Skills</a></li>
-          <li><a>Projects</a></li>
-          <li><a>Contact</a></li>
+          <li><a href="#projects" onClick={(e) =>handleScroll(e, 'projects')} className="hover:underline">Projects</a></li>
+          <li><a href="#contact" onClick={(e) =>handleScroll(e, 'contact')} className="hover:underline">Contact</a></li>
         </ul>
       </div>
     </div>

@@ -1,7 +1,7 @@
 // import React from "react";
 const Contact = () => {
   return (
-    <footer className="bg-[#1C1000]/95 text-white py-10 px-4" id="contact">
+    <footer  className="bg-[#1C1000]/95 text-white py-10 px-4" id="contact">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Contact Info */}
         <div>
