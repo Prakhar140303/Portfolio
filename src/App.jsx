@@ -20,14 +20,14 @@ const App = () => {
             backgroundImage: "url('../assets/computer_background_transparent.png')",
           }}>
         {power &&
-        <div className="  flex flex-col items-center justify-center text-center overflow-hidden">
+        <div className="  flex flex-col sm:p-4 p-32 items-center justify-center text-center overflow-hidden">
           <Home />
         </div>
         }
         {!power && 
         <div className='flex flex-col items-center overflow-hidden'>
 
-          <div className="  flex flex-col  md:pt-28  pt-32 pb-8  items-center" 
+          <div className="  flex flex-col  sm:pt-32  pt-60 pb-8 h-screen items-center" 
             onClick={()=>setPower(!power)}>
             <Power className='size-24 ' />
             <span className='md:text-5xl sm:text-4xl text-3xl'>Click To Start</span>
