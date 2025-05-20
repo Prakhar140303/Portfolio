@@ -53,5 +53,5 @@ const Contact = () => {
     </footer>
   );
 };
-
+  
 export default Contact;

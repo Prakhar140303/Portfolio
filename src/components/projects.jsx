@@ -11,7 +11,7 @@ const projects = [
     name: "Portfolio Website",
     description: "Responsive portfolio built with React and Tailwind.",
     image: "../assets/portfolio.png",
-    link: "https://yourportfolio.com",
+    link: "https://portfolio-obx9.vercel.app/ ",
   },
   {
     name: "BingeShop",

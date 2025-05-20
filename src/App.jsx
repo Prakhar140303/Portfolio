@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import {Power} from 'lucide-react'
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import Education from './components/Education';
@@ -8,49 +7,42 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Platforms from './components/Platforms';
 import Projects from './components/projects';
-import  Typewriter  from 'typewriter-effect';
-
+import Loader from './components/Loader';
 const App = () => {
-  const [power ,setPower] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // simulate loading delay (e.g. asset load)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // adjust time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <div className='bg-[#1C1000]/95'>
-      {power && <Header />}
-        <main  className={`  p-12  h-screen w-screen bg-no-repeat bg-center bg-contain overflow-hidden"+ ${power===true ? "sm:mb-12 mt-16 my-4" :""}` }
-          style={{
-            backgroundImage: "url('../assets/computer_background_transparent.png')",
-          }}>
-        {power &&
-        <div className="  flex flex-col sm:p-4 p-32 items-center justify-center text-center overflow-hidden">
-          <Home />
-        </div>
-        }
-        {!power && 
-        <div className='flex flex-col items-center overflow-hidden'>
-
-          <div className="  flex flex-col  sm:pt-32  pt-60 pb-8 h-screen items-center" 
-            onClick={()=>setPower(!power)}>
-            <Power className='size-24 ' />
-            <span className='md:text-5xl sm:text-4xl text-3xl'>Click To Start</span>
-            <div className='flex flex-row items-center md: pt-4'>
-              <span className="animate-pulse text-2xl md:text-3xl">Loading...</span>
+    <>{isLoading ? <Loader /> :
+      <div className='bg-[#1C1000]/95'>
+        <Header />
+          <main  className="p-12  h-screen w-screen bg-no-repeat bg-center bg-contain overflow-hiddensm:mb-12 mt-16 my-4" 
+            style={{
+              backgroundImage: "url('../assets/computer_background_transparent.png')",
+            }}>
+          <div className="  flex flex-col sm:p-4 p-32 items-center justify-center text-center overflow-hidden">
+            <Home />
           </div>
-          </div>
-        </div>
 
-        }
-      </main>
-      {power && 
-        <>
-        <Portfolio />
-        <Education />
-        <Skills />
-        <Platforms />
-        <Projects />
-      <Contact />
+        </main>
+          <>
+          <Portfolio />
+          <Education />
+          <Skills />
+          <Platforms />
+          <Projects />
+        <Contact />
 
-        </>
-      }
-    </div>
+          </>
+      </div>}
+    </>
   );
 };
 
