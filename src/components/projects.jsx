@@ -9,7 +9,7 @@ const projects = [
   },
   {
     name: "Portfolio Website",
-    description: "Responsive portfolio built with React and Tailwind.",
+    description: "Responsive portfolio built with React and Tailwindcss.",
     image: "../assets/portfolio.png",
     link: "https://portfolio-obx9.vercel.app/ ",
   },
