@@ -1,4 +1,5 @@
 import Typewriter from "typewriter-effect";
+import {motion} from 'framer-motion'
 const Home = () => {
 
   const handleScroll = (e, id) => {
@@ -33,20 +34,22 @@ const Home = () => {
         />
         </div>
         <div className="flex justify-center gap-4">
-          <a
+          <motion.a
             href="#projects"
             onClick={(e) =>handleScroll(e, 'projects')}
             className="px-6 py-3 bg-[#753314]/95 hover:bg-[#753314]/60 text-white rounded-full shadow-lg transition"
-          >
+            initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}
+            >
             View Projects
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#contact"
             onClick={(e) =>handleScroll(e, 'contact')}
             className="px-6 py-3 border border-[#753314]/20 bg-[#753314]/20 hover:bg-[#753314]/60 hover:text-gray-900 rounded-full transition"
+            initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}
           >
             Contact Me
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>

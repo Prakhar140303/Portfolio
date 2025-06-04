@@ -53,7 +53,7 @@ export default function Skills() {
               {items.map(({ name, icon: Icon }) => (
                 <div
                   key={name}
-                  className="flex flex-col items-center bg-white p-4 rounded-lg shadow hover:shadow-lg transition"
+                  className="flex flex-col items-center bg-white p-4 rounded-lg shadow hover:shadow-lg hover:scale-y-125 transition border-4 border-blue-500  border-opacity-50"
                 >
                   <Icon className="text-4xl text-[#753314] mb-2" />
                   <span className="mt-1 text-sm font-medium">{name}</span>

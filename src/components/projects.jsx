@@ -1,4 +1,5 @@
 // import React from "react";
+import {CodeXml} from 'lucide-react'
 
 const projects = [
   {
@@ -17,7 +18,7 @@ const projects = [
     name: "BingeShop",
     description: "Web application for buying and selling products.",
     image: "../assets/BingeShop.png",
-    link: "https://github.com/Prakhar140303/BingeShop",
+    link: "https://bingeshop.onrender.com/",
   },
 ];
 
@@ -27,7 +28,7 @@ const Projects = () => {
       <h2 className=" md:text-5xl text-3xl font-bold text-center mb-8">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl ">
         {projects.map((project, index) => (
-          <div key={index} className="bg-[#1c1208] rounded-xl shadow-md overflow-hidden hover:scale-105 transition-transform">
+          <div key={index} className="bg-[#1c1208] rounded-xl shadow-md overflow-hidden hover:scale-105 transition-transform border-white border-2 border-opacity-35">
             <img
               src={project.image}
               alt={project.name}
@@ -36,14 +37,29 @@ const Projects = () => {
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
               <p className="text-sm mb-4">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400"
-              >
-                Visit Project
-              </a>
+              <div className="flex flex-row justify-between">
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400"
+                  >
+                  Visit Project
+                </a>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400"
+                  >
+                  <span className='flex flex-row gap-2'>
+                    <CodeXml />
+                    Source code
+                    
+                  </span>
+                </a>
+                </div>
             </div>
           </div>
         ))}
