@@ -7,18 +7,21 @@ const projects = [
     description: "Web application for sending and receiving messages.",
     image: "../assets/RelayWire.png",
     link: "https://relaywire.onrender.com",
+    git_repository: "https://github.com/Prakhar140303/RelayWire-chat-app",
   },
   {
     name: "Portfolio Website",
     description: "Responsive portfolio built with React and Tailwindcss.",
     image: "../assets/portfolio.png",
     link: "https://portfolio-obx9.vercel.app/ ",
+    git_repository:"https://github.com/Prakhar140303/Portfolio",
   },
   {
     name: "BingeShop",
     description: "Web application for buying and selling products.",
     image: "../assets/BingeShop.png",
     link: "https://bingeshop.onrender.com/",
+    git_repository : "https://github.com/Prakhar140303/BingeShop",
   },
 ];
 
@@ -48,7 +51,7 @@ const Projects = () => {
                   Visit Project
                 </a>
                 <a
-                  href={project.link}
+                  href={project.git_repository}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400"
